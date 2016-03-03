@@ -1,5 +1,6 @@
 # TP2 Gestion d'une promotion d'étudians 
 # http://www.fil.univ-lille1.fr/~L1S2API/CoursTP/tp1_structures_iterables.html
+# http://www.fil.univ-lille1.fr/~L1S2API/mementopython3.pdf
 
 from etudiants import *
 
