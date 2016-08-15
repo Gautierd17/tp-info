@@ -6,7 +6,7 @@ CONFIGPATH=.
 SOURCEDOC= sourcedoc
 DOC=doc
 
-.PHONY: clean doc
+.PHONY: clean doc 
 
 clean:
 	rm -f *~ */*~
