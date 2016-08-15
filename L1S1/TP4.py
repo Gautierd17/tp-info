@@ -2,7 +2,7 @@
 #TP 4 http://www.fil.univ-lille1.fr/~L1S1Info/Doc/HTML/tp_iteration_conditionnelle.html
 #TP 4 : Itération conditionnelle
 
-#somme_partielle
+#somme_partielle 
 
 import math
 import sys        
