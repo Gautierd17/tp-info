@@ -36,7 +36,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
-#    'sphinxcontrib.tikz',
+#    'sphinxcontrib.tikz', 
     'sphinx.ext.viewcode'
 ]
 
