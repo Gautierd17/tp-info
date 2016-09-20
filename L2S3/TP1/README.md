@@ -79,7 +79,7 @@ In this case, we can see that accessing an element generates identical code, but
              19 RETURN_VALUE
 ```
 
-Also, we can check it using Python module `timeit'.
+Also, we can check it using Python module `timeit`.
 
 ![Terminal](https://pp.vk.me/c836333/v836333766/110b/9VOdwJw_AZ4.jpg)
 **...and...**
