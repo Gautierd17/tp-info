@@ -255,3 +255,13 @@ Parameters of this function are defined in the following table.
   Paramètres | Retourne
 ------------ | -------------
 card1, card2 | 1, -1, 0
+
+### 1.3.4. Utilisation du module
+
+```java
+Dans cette version, les joueurs ont initialement un nombre égal de cartes extraites d’un jeu de cartes préalablement mélangé. À chaque tour, les joueurs jouent chacun la première de leur carte en la déposant sur la table. Celui qui a déposé la carte de plus haute valeur remporte toutes les cartes sur la table et les range à la fin de son tas de cartes en commençant par la carte la plus forte (celle qui lui a permis de remporté la manche). Si les hauteurs des deux cartes jouées sont égales, il y a alors “bataille” et ces cartes sont laissées sur la table. Le tour suivant peut alors commencer.
+
+Le jeu s’arrête dès que l’un des joueurs n’a plus de carte, dans ce cas il a perdu la partie (NB : des parties infinies sont possibles, on ne cherchera pas à détecter ces situations).
+
+Écrivez votre programme de manière qu’il puisse prendre en paramètre sur la ligne de commande le nombre de cartes que possède chaque joueur au début de la partie. Ce nombre devra être inférieur ou égal à 16 qui sera aussi la valeur par défaut.
+```
