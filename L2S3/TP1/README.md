@@ -174,9 +174,9 @@ none - empty | a randomply chosen card
 
 #### Function `compare_value`:
 Compares cards values, returns:
-        • a positive number if card1's value is greater than card2's
-        • a negative number if card1's value is lower than card2's
-        • 0 if card1's value is the same greater than card2's
+  * a positive number if card1's value is greater than card2's
+  * a negative number if card1's value is lower than card2'
+  * 0 if card1's value is the same greater than card2's
 ```python
 def compare_value(card1, card2):
     if card1[0] > card2[0]:
@@ -196,10 +196,10 @@ card1, card2 | 1, -1, 0
 
 
 #### Function `compare_color`:
-   Compares cards colors, returns:
-      • a positive number if card1's color is greater than card2's
-      • a negative number if card1's color is lower than card2's
-      • 0 if card1's color is the same greater than card2's
+Compares cards colors, returns:
+  * a positive number if card1's color is greater than card2's
+  * a negative number if card1's color is lower than card2's
+  * 0 if card1's color is the same greater than card2's
 
 
 ```python
@@ -221,11 +221,10 @@ Parameters of this function are defined in the following table.
 card1, card2 | 1, -1, 0
 
 #### Function `compare`:
-    Compares cards, first it compares
-    cards values and if equal cards colors returns:
-        • a positive number if card1 is greater than card2
-        • a negative number if card1 is lower than card2
-        • 0 if card1 is the same greater than card2
+Compares cards, first it compares cards values and if equal cards colors returns:
+  * a positive number if card1 is greater than card2
+  * a negative number if card1 is lower than card2
+  * 0 if card1 is the same greater than card2
 
 ```python
 def compare(card1, card2):
