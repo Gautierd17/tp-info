@@ -91,21 +91,17 @@ So in this case, instantiation is almost an order of magnitude faster for the tu
 
 ```python
 def get_value(card):
-    """
-    Returns the value of the card
-    Paramètres: • card (card) - the card
-    Retourne: (element of card.VALUES) - the value of the card
-    CU: none
-    Exemple:
+"""
+Exemple:
     >>> c = create('Ace', 'heart')
     >>> get_value(c)
     'Ace'
-    """
+"""
     return card[0]
-    ```
+  ```
  
   Parameters of this function are defined in the following table.
   
   Paramètres | Retourne
 ------------ | -------------
-card | the value of the card
+card - the card | the value of the card
