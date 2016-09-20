@@ -82,7 +82,7 @@ In this case, we can see that accessing an element generates identical code, but
 Also, we can check it using Python module `timeit'.
 
 ![Terminal](https://pp.vk.me/c836333/v836333766/110b/9VOdwJw_AZ4.jpg)
-and
+**...and...**
 ![Terminal](https://pp.vk.me/c836333/v836333766/1112/iDZqJj7YWt8.jpg)
 So in this case, instantiation is almost an order of magnitude faster for the tuple, but item access is actually somewhat faster for the list.
 *So, in our case tuple is the better decision.*
