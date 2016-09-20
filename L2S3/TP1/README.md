@@ -27,7 +27,7 @@ VALUES = ["7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 COLORS = ["club", "diamond", "heart", "spade"]
 ```
 ### 1.3.2. Interface du module
-#### Function `create`
+#### Function `create`:
 The construction of this function without documentation looks next way.
 ```python
 1.  def create(value, color):
@@ -87,7 +87,8 @@ Also, we can check it using Python module `timeit`.
 So in this case, instantiation is almost an order of magnitude faster for the tuple, but item access is actually somewhat faster for the list.
 *So, in our case tuple is the better decision.*
 
-#### Function `get_value`
+#### Function `get_value`:
+Returns the value of the card.
 
 ```python
 def get_value(card):
@@ -105,3 +106,153 @@ Exemple:
   Paramètres | Retourne
 ------------ | -------------
 card - the card | the value of the card
+
+#### Function `get_color`:
+Returns the color of the card.
+```python
+def get_color(card):
+"""
+Exemple:
+    >>> c = create('Ace', 'heart')
+    >>> get_color(c)
+    'heart'
+"""
+    return card[1]
+  ```
+  
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card - the card | the color of the card
+
+#### Function `to_string`:
+Returns a string representation of the card.
+```python
+def to_string(card):
+    """
+    Example:
+    >>> c = create('Ace', 'heart')
+    >>> to_string(c)
+    'Ace of heart'
+    """
+    return card[0] + ' of ' + card[1]
+```
+
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card - the card | a string representation
+
+#### Function `random_card`:
+Create a card whose value and color are randomly chosen
+
+The program should randomly take one element from the list VALUES and from the list COLORS.
+Why we use `random.choise`? 
+We don't have to select more than one item from a list or select an item from a set, so we don't have to use `random.select`.
+We don't need to use index so we don't have to use `randrange`.
+
+```javascript
+random.choice(seq)
+Return a random element from the non-empty sequence seq. If seq is empty, raises IndexError.
+```
+
+```python
+def random_card():
+    import random
+    value = random.choice(VALUES)
+    color = random.choice(COLORS)
+    card = (value, color)
+    return card
+```
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+none - empty | a randomply chosen card
+
+#### Function `compare_value`:
+Compares cards values, returns:
+        • a positive number if card1's value is greater than card2's
+        • a negative number if card1's value is lower than card2's
+        • 0 if card1's value is the same greater than card2's
+```python
+def compare_value(card1, card2):
+    if card1[0] > card2[0]:
+        return -1
+    elif card1[0] < card2[0]:
+        return 1
+    elif card1[0] == card2[0]:
+        return 0
+    else:
+        return AssertionError
+```
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card1, card2 | 1, -1, 0
+
+
+#### Function `compare_color`:
+   Compares cards colors, returns:
+      • a positive number if card1's color is greater than card2's
+      • a negative number if card1's color is lower than card2's
+      • 0 if card1's color is the same greater than card2's
+
+
+```python
+def compare_color(card1, card2):
+     if card1[1] > card2[1]:
+        return -1
+    elif card1[1] < card2[1]:
+        return 1
+    elif card1[1] == card2[1]:
+        return 0
+    else:
+        return AssertionError
+```
+
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card1, card2 | 1, -1, 0
+
+#### Function `compare`:
+    Compares cards, first it compares
+    cards values and if equal cards colors returns:
+        • a positive number if card1 is greater than card2
+        • a negative number if card1 is lower than card2
+        • 0 if card1 is the same greater than card2
+
+```python
+def compare(card1, card2):
+    if card1[0] > card2[0] and card1[1] > card2[1]:
+        return 1
+    elif card1[0] < card2[0] and card1[1] < card2[1]:
+        return -1
+    elif card1[0] < card2[0] and card1[1] > card2[1]:
+        return -1
+    elif card1[0] > card2[0] and card1[1] < card2[1]:
+        return 1
+    elif card1[0] > card2[0] and card1[1] == card2[1]:
+        return -1
+    elif card1[0] < card2[0] and card1[1] == card2[1]:
+        return 1
+    elif card1[0] == card2[0] and card1[1] > card2[1]:
+        return 1
+    elif card1[0] == card2[0] and card1[1] < card2[1]:
+        return -1
+    elif card1[0] == card2[0] and card1[1] == card2[1]:
+        return 0
+    else:
+        return AssertionError
+```
+
+Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card1, card2 | 1, -1, 0
