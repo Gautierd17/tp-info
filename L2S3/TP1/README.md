@@ -27,7 +27,7 @@ VALUES = ["7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 COLORS = ["club", "diamond", "heart", "spade"]
 ```
 ### 1.3.2. Interface du module
-#### Function Create
+#### Function `create`
 The construction of this function without documentation looks next way.
 ```python
 1.  def create(value, color):
@@ -82,9 +82,30 @@ In this case, we can see that accessing an element generates identical code, but
 Also, we can check it using Python module `timeit`.
 
 ![Terminal](https://pp.vk.me/c836333/v836333766/110b/9VOdwJw_AZ4.jpg)
-**...and...**
+**...and**
 ![Terminal](https://pp.vk.me/c836333/v836333766/1112/iDZqJj7YWt8.jpg)
 So in this case, instantiation is almost an order of magnitude faster for the tuple, but item access is actually somewhat faster for the list.
 *So, in our case tuple is the better decision.*
 
+#### Function `get_value`
 
+```python
+def get_value(card):
+    """
+    Returns the value of the card
+    Paramètres: • card (card) - the card
+    Retourne: (element of card.VALUES) - the value of the card
+    CU: none
+    Exemple:
+    >>> c = create('Ace', 'heart')
+    >>> get_value(c)
+    'Ace'
+    """
+    return card[0]
+    ```
+ 
+  Parameters of this function are defined in the following table.
+  
+  Paramètres | Retourne
+------------ | -------------
+card | the value of the card
