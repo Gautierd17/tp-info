@@ -1,3 +1,5 @@
+# For details : https://github.com/tonythedealer/TP-info/tree/master/L2S3/TP1
+
 ### Defined constants for this TP
 VALUES = ["7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 COLORS = ["club", "diamond", "heart", "spade"]
