@@ -256,6 +256,12 @@ Parameters of this function are defined in the following table.
 ------------ | -------------
 card1, card2 | 1, -1, 0
 
+### 1.3.3. Implantation du module
+```java
+from card import *
+```
+
+
 ### 1.3.4. Utilisation du module
 
 ```java
