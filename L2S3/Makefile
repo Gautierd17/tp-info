@@ -2,7 +2,7 @@
 # Makefile pour créer un projet
 
 # Adaptez la variable en y portant votre ou vos noms
-AUTHOR=BENZINA Amina and SHCHERBAKOVA Iuliia
+AUTHOR=BENZINA Amina, SHCHERBAKOVA Iuliia
 
 
 .PHONY: project clean
