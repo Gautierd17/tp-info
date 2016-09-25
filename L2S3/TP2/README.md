@@ -34,7 +34,7 @@ def fact(n, talkative=False, __depth=0):
     ......->fact(2)
     .........->fact(1)
     ............->fact(0)
-    ............<-1       # error : fact(0) != 0. Zero replaced by 1.
+    ............<-1     
     .........<-1
     ......<-2
     ...<-6
@@ -45,7 +45,7 @@ def fact(n, talkative=False, __depth=0):
         'parameter n must be a non negative integer'
     if talkative:
         dots = '...' * __depth
-        print('{:s}->fact({:d})'.format(dots,1)) # n replaced by 1.
+        print('{:s}->fact({:d})'.format(dots,n)) .
     if n == 0:
         res = 1
     else:
