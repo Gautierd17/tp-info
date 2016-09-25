@@ -11,7 +11,8 @@
 
 ### 2.2. Tracer une fonction récursive
 
-Talkative function example:
+Talkative function example.
+*By default, talkative (optional) parameter is set to False and the function fact calculates the factorial of the number passed as parameter and returns the value. But when this parameter is assigned to True, the function then traces the different recursive calls by printing them on the standard output. (The optional parameter __depth only useful if the talkative parameter is True, this parameter manages the indentation of recursive calls.)*
 ```python
 def fact(n, talkative=False, __depth=0):
     """
