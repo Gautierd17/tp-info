@@ -33,7 +33,7 @@ def fact(n, talkative=False, __depth=0):
     ......->fact(2)
     .........->fact(1)
     ............->fact(0)
-    ............<-1       #error : fact(0) != 0. Zero replaced by 1.
+    ............<-1       # error : fact(0) != 0. Zero replaced by 1.
     .........<-1
     ......<-2
     ...<-6
