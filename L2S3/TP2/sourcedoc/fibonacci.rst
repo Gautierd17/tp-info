@@ -94,7 +94,7 @@ Nombre d’appels pour n compris entre 0 et 10:
    8            67
    9            109
    10           177
-   40           long calc.
+   40           662320563
    ===========  ============
 
 It takes more than 10 mins to execute a command `python3 fibonacci.py 40 | wc -l`.
