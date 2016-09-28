@@ -13,6 +13,10 @@
 
 #### Talkative function example.
 *By default, talkative (optional) parameter is set to False and the function fact calculates the factorial of the number passed as parameter and returns the value. But when this parameter is assigned to True, the function then traces the different recursive calls by printing them on the standard output. (The optional parameter __depth only useful if the talkative parameter is True, this parameter manages the indentation of recursive calls.)*
+> Recursion in computer science is a method where the solution to a problem depends on solutions to smaller instances of the same > > > > problem (as opposed to iteration). The approach can be applied to many types of problems, and recursion is one of the central ideas > > of computer science.
+
+![alt text](http://i.stack.imgur.com/HAEZW.gif "Recursion")
+
 ```python
 def fact(n, talkative=False, __depth=0):
     """
