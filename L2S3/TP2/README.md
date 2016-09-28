@@ -1,7 +1,7 @@
 # TP 2 : Algorithmes et programmation
 
-### 2. Algorithmes récursifs
-
+## 2. Algorithmes récursifs
+### Part 1
 
 [![Download Python](https://pp.vk.me/c836333/v836333766/10af/Uxs7hx8-fOU.jpg)](https://www.python.org/downloads/release/python-344/)
 [![Documentation Python](https://pp.vk.me/c836333/v836333766/10b6/r1KTGitaPQA.jpg)](https://docs.python.org/3.4/)
@@ -357,4 +357,28 @@ Here's a table from this document:
 | 10 |177|
 | 40 |331160281|
 
+Also, we can find the exact time spent on execution of this function. For this, we're going to use module `time` of python.
+```python
+# example for f(10):
+>>> import time
 
+>>> start = time.time()
+>>> fibonacci(10)
+>>> end = time.time()
+>>> print(end - start)
+
+>>> 0.0 #seconds
+
+# example f(40):
+>>> import time
+
+>>> start = time.time()
+>>> fibonacci(40)
+>>> end = time.time()
+>>> print(end - start)
+
+>>> 83.16859483718872 #seconds
+```
+As we can see, the time spent on execution of this program increases exponentially.
+
+ 
