@@ -27,8 +27,8 @@ Here are the Fibonacci numbers for :math:`0\leq n \leq 10` :
    :math:`n`     :math:`f_n`  
    ===========  ============
    0            0
-   1            1
-   2            1
+   1            1             
+   2            1           
    3            2
    4            3
    5            5
@@ -40,4 +40,62 @@ Here are the Fibonacci numbers for :math:`0\leq n \leq 10` :
    ===========  ============
 
 
--
+A recursive function
+====================   
+
+A recursive function
+====================   
+A function:
+
+.. literalinclude:: ../src/fibonacci.py
+   :language: python
+   :pyobject: fibonacci
+   :linenos:
+
+It takes more time to find the value of f(40) than value of f(10) or less.
+I've used the module time of python to find exact values of time spent on calculations.
+Example f(10)...f(0):
+>>> import time
+
+>>> start = time.time()
+>>> fibonacci(10)
+>>> end = time.time()
+>>> print(end - start)
+
+>>> 0.0 #seconds
+
+Example f(40):
+>>> import time
+
+>>> start = time.time()
+>>> fibonacci(40)
+>>> end = time.time()
+>>> print(end - start)
+
+>>> 83.16859483718872 #seconds
+
+Quel rapport existe-t-il entre le nombre de lignes imprimées et le nombre d’appels à la fonction ?
+
+`(nbre_lignes-1)/2 = nbre_appels`
+
+Nombre d’appels pour n compris entre 0 et 10:
+
+   ===========  ============
+   `n`          `nbre_appels` 
+   ===========  ============
+   0            0
+   1            1
+   2            3
+   3            5
+   4            9
+   5            15
+   6            25
+   7            41
+   8            67
+   9            109
+   10           177
+   40           long calc.
+   ===========  ============
+
+It takes more than 10 mins to execute a command `python3 fibonacci.py 40 | wc -l`.
+For details : https://github.com/tonythedealer/TP-info/tree/master/L2S3/TP2
