@@ -70,7 +70,105 @@ def fact(n, talkative=False, __depth=0):
 
 > In mathematics, a **binomial coefficient** is any of the positive integers that occur as coefficients in the binomial theorem.
 
-Binomial formula:
+**Binomial formula:**
 ![alt text][logo]
 [logo]: https://wikimedia.org/api/rest_v1/media/math/render/svg/7a75ee6c0491af552e7af42d90f1d3b4245d7484 "Binomial"
 
+**Recursive formula:**
+![alt text][logo]
+[logo]: https://wikimedia.org/api/rest_v1/media/math/render/svg/c1736571dc6d640fd320aff4806cd92769862f2d "Recursive"
+
+```python
+def binomial(n,p,talkative=False, __depth=0):
+    """
+    Calculates binomial coefficient xCy = x! / (y! (x-y)!).
+    This is recursive algorithm which takes two numbers n and p
+    as parameter and returns binomial coefficient.
+
+    :parameter n: natural number or 0
+    :parameter p: natural number or 0
+    :parameter talkative:(optional boolean) defaults set to False. If True, 
+                          prints, recursive calls during computation
+    :return: binomial coefficient of two given natural(or 0) numbers
+    :UC: 0<=p<=n
+
+    :Examples:
+    >>> binomial(6,4)
+    15
+    >>> binomial(6,4, talkative=True)
+    ->binomial(6,4)
+    ...->binomial(5,3)
+    ......->binomial(4,2)
+    .........->binomial(3,1)
+    ............->binomial(2,0)
+    ............<-1
+    ............->binomial(2,1)
+    ...............->binomial(1,0)
+    ...............<-1
+    ...............->binomial(1,1)
+    ...............<-1
+    ............<-2
+    .........<-3
+    .........->binomial(3,2)
+    ............->binomial(2,1)
+    ...............->binomial(1,0)
+    ...............<-1
+    ...............->binomial(1,1)
+    ...............<-1
+    ............<-2
+    ............->binomial(2,2)
+    ............<-1
+    .........<-3
+    ......<-6
+    ......->binomial(4,3)
+    .........->binomial(3,2)
+    ............->binomial(2,1)
+    ...............->binomial(1,0)
+    ...............<-1
+    ...............->binomial(1,1)
+    ...............<-1
+    ............<-2
+    ............->binomial(2,2)
+    ............<-1
+    .........<-3
+    .........->binomial(3,3)
+    .........<-1
+    ......<-4
+    ...<-10
+    ...->binomial(5,4)
+    ......->binomial(4,3)
+    .........->binomial(3,2)
+    ............->binomial(2,1)
+    ...............->binomial(1,0)
+    ...............<-1
+    ...............->binomial(1,1)
+    ...............<-1
+    ............<-2
+    ............->binomial(2,2)
+    ............<-1
+    .........<-3
+    .........->binomial(3,3)
+    .........<-1
+    ......<-4
+    ......->binomial(4,4)
+    ......<-1
+    ...<-5
+    <-15
+    15
+    """
+    assert 0<=p<=n
+    if talkative:
+        dots = '...' * __depth
+        print('{:s}->binomial({:d},{:g})'.format(dots,n,p))
+    if p==n or p==0:
+        res = 1
+    else:
+        res = binomial(n-1,p-1, talkative=talkative,__depth=__depth + 1)+binomial(n-1,p, talkative=talkative,__depth=__depth + 1)
+        
+    if talkative:
+        print('{:s}<-{:d}'.format(dots, res))
+    return res
+```
+
+Also, this function can be created using python module `math`.
+>>> from math import factorial as fact
