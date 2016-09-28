@@ -11,13 +11,14 @@
 
 ### 2.2. Tracer une fonction récursive
 
-#### What is recursion
+#### * What is recursion? *
 
 > Recursion in computer science is a method where the solution to a problem depends on solutions to smaller instances of the same  problem (as opposed to iteration). The approach can be applied to many types of problems, and recursion is one of the central ideas of computer science.
 
 ![alt text](http://i.stack.imgur.com/HAEZW.gif "Recursion")
 
-#### Talkative function example.
+#### * Talkative and recursive function example : fact *
+
 *By default, talkative (optional) parameter is set to False and the function fact calculates the factorial of the number passed as parameter and returns the value. But when this parameter is assigned to True, the function then traces the different recursive calls by printing them on the standard output. (The optional parameter __depth only useful if the talkative parameter is True, this parameter manages the indentation of recursive calls.)*
 
 
@@ -64,3 +65,10 @@ def fact(n, talkative=False, __depth=0):
         
     return res
 ```
+
+#### * Talkative and recursive function example : binomial *
+
+> In mathematics, a **binomial coefficient** is any of the positive integers that occur as coefficients in the binomial theorem.
+
+Binomial formula:
+![alt text](https://wikimedia.org/api/rest_v1/media/math/render/svg/7a75ee6c0491af552e7af42d90f1d3b4245d7484 "Binomial")
