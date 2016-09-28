@@ -271,6 +271,7 @@ def somme(a, b, talkative=False, __depth=0):
         print('{:s}<-{:d}'.format(dots, res))
         
     return res
+    
 ```
 
 ### 2.3. Nombres de Fibonacci
