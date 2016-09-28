@@ -71,10 +71,10 @@ def fact(n, talkative=False, __depth=0):
 > In mathematics, a **binomial coefficient** is any of the positive integers that occur as coefficients in the binomial theorem.
 
 **Binomial formula:**
-![alt text][https://wikimedia.org/api/rest_v1/media/math/render/svg/7a75ee6c0491af552e7af42d90f1d3b4245d7484 "Binomial"]
+![Binomial](https://wikimedia.org/api/rest_v1/media/math/render/svg/7a75ee6c0491af552e7af42d90f1d3b4245d7484)
 
 **Recursive formula:**
-![alt text][https://wikimedia.org/api/rest_v1/media/math/render/svg/c1736571dc6d640fd320aff4806cd92769862f2d "Recursive"]
+![Recursive](https://wikimedia.org/api/rest_v1/media/math/render/svg/c1736571dc6d640fd320aff4806cd92769862f2d)
 
 ```python
 def binomial(n,p,talkative=False, __depth=0):
@@ -226,7 +226,8 @@ def is_palindromic(s, talkative=False, __depth=0):
 
 ####  Talkative and recursive function example : somme
 
-> Sum of two real numbers.
+
+
 ```python
 def somme(a, b, talkative=False, __depth=0):
     """
@@ -271,8 +272,9 @@ def somme(a, b, talkative=False, __depth=0):
         print('{:s}<-{:d}'.format(dots, res))
         
     return res
-    
 ```
+    
+
 
 ### 2.3. Nombres de Fibonacci
 
@@ -280,9 +282,9 @@ def somme(a, b, talkative=False, __depth=0):
 > *0 1 1 2 3 5 8 13 21 34 55*
 
 Formula: 
-![alt text][https://wikimedia.org/api/rest_v1/media/math/render/svg/f00c4321176b6522fe148a11a80a8e5fca9e88da "Fibonacci"]
-![alt text][http://images-mediawiki-sites.thefullwiki.org/02/1/3/9/99174101582843431.png "Fibonacci"]
-![alt text][http://40.media.tumblr.com/0a1c0913f2ac24ce8838e85ced735e37/tumblr_mno79kgNkV1sszkooo1_1280.png "Fibonacci"]
+![Fibonacci](https://wikimedia.org/api/rest_v1/media/math/render/svg/f00c4321176b6522fe148a11a80a8e5fca9e88da)
+![Fibonacci](http://images-mediawiki-sites.thefullwiki.org/02/1/3/9/99174101582843431.png)
+![Fibonacci](http://40.media.tumblr.com/0a1c0913f2ac24ce8838e85ced735e37/tumblr_mno79kgNkV1sszkooo1_1280.png)
 
 #### Talkative Fibonacci Function
 
