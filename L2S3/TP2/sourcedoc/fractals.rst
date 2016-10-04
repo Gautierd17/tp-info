@@ -27,7 +27,7 @@ Sierpinski triangle
 ===================
 
 .. _fig:all_sierpinski:
-.. figure:: images/all_sierpinsli.png
+.. figure:: images/all_sierpinski.png
    :align: center
    :width: 50%
    :alt: la courbe de Sierpinski de l'ordre 0 à l'ordre 5
