@@ -17,6 +17,9 @@ Von Koch curve
    :pyobject: von_koch
    :linenos:
 
+Von Koch snowflake
+==================
+
 .. _fig:von_koch_snowflake:
 .. figure:: images/von_koch_snowflake4.png
    :align: center
@@ -40,6 +43,9 @@ Cesaro curve
    :language: python
    :pyobject: cesaro
    :linenos:
+
+Cesaro square
+=============
    
 .. _fig:cesaro_square:
 .. figure:: images/cesaro_square5.png
