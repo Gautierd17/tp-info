@@ -17,6 +17,16 @@ Von Koch curve
    :pyobject: von_koch
    :linenos:
 
+.. _fig:von_koch_snowflake:
+.. figure:: images/von_koch_snowflake4.png
+   :align: center
+   :width: 50%
+   :alt: 
+   
+.. literalinclude:: ../src/fractals.py
+   :language: python
+   :pyobject: von_koch_flocon
+   :linenos:   
 Cesaro curve
 ============
 
@@ -30,6 +40,17 @@ Cesaro curve
    :language: python
    :pyobject: cesaro
    :linenos:
+   
+.. _fig:cesaro_square:
+.. figure:: images/cesaro_square5.png
+   :align: center
+   :width: 50%
+   :alt:    
+   
+.. literalinclude:: ../src/fractals.py
+   :language: python
+   :pyobject: cesaro_carre
+   :linenos:   
    
 Sierpinski triangle
 ===================
