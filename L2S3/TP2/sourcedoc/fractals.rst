@@ -20,7 +20,7 @@ Von Koch curve
 .. _fig:von_koch_snowflake:
 .. figure:: images/von_koch_snowflake4.png
    :align: center
-   :width: 50%
+   :width: 30%
    :alt: 
    
 .. literalinclude:: ../src/fractals.py
@@ -44,7 +44,7 @@ Cesaro curve
 .. _fig:cesaro_square:
 .. figure:: images/cesaro_square5.png
    :align: center
-   :width: 50%
+   :width: 30%
    :alt:    
    
 .. literalinclude:: ../src/fractals.py
