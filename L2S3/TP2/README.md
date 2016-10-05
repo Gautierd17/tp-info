@@ -381,4 +381,95 @@ Also, we can find the exact time spent on execution of this function. For this, 
 ```
 As we can see, the time spent on execution of this program increases exponentially.
 
- 
+### Part 2.
+
+#### Courbe de Von Koch
+
+![Von Koch](http://www.fil.univ-lille1.fr/~L2S3API/CoursTP/_images/all_von_koch.png)
+
+```python
+def von_koch(l,n):
+    """
+    Draws the Von koch's curve of length l and order n.
+    :param l: the von koch's curve length
+    :type l: int or float (a strictly positive number )
+    :param n: the von koch's curve order (a whole number)
+    :type n: int
+    :UC:None
+    """
+    assert (isinstance(l, int) or isinstance(l, float)) and l>0, 'parameter l is a positive float or integer'
+    assert isinstance(n, int) and n>=0, 'parameter n is a whole number'
+    if n==0:
+        forward(l)
+    else:
+        von_koch(l/3,n-1)
+        left(60)
+        von_koch(l/3,n-1)
+        right(120)
+        von_koch(l/3,n-1)
+        left(60)
+        von_koch(l/3,n-1)
+```        
+
+#### Courbe de Cesaro
+
+![Cesaro](http://www.fil.univ-lille1.fr/~L2S3API/CoursTP/_images/all_cesaro.png)
+
+```python
+def cesaro(l,n):
+    """
+    Draws Cesaro curve of length l and order n.
+    :param l: the von koch's curve length
+    :type l: int or float (a strictly positive number )
+    :param n: the von koch's curve order (a whole number)
+    :type n: int
+    :UC:None     
+    """
+    assert (isinstance(l, int) or isinstance(l, float)) and l>0, 'parameter l is a positive float or integer'
+    assert isinstance(n, int) and n>=0, 'parameter n is a whole number'        
+    if n==0:
+        forward(l)
+    else:
+        cesaro(l/2, n-1)
+        left(85)
+        cesaro(l/2, n-1)
+        right(170)
+        cesaro(l/2, n-1)
+        left(85)
+        cesaro(l/2, n-1)
+```        
+
+#### Triangle de Sierpinski
+
+![Triangle de Sierpinski](http://www.fil.univ-lille1.fr/~L2S3API/CoursTP/_images/all_sierpinski.png)
+
+```python
+def sierpinski(l,n):
+    """
+    Draws the Sierpinski triangle of length l and order n.
+    :param l: the von koch's curve length
+    :type l: int or float (a strictly positive number )
+    :param n: the von koch's curve order (a whole number)
+    :type n: int
+    :UC:None
+    """
+    assert (isinstance(l, int) or isinstance(l, float)) and l>0, 'parameter l is a positive float or integer'
+    assert isinstance(n, int) and n>=0, 'parameter n is a whole number'      
+    if n==0:
+        for i in range(0,3):
+            fd(l)
+            left(120)
+    else:
+        sierpinski(l/2,n-1)
+        fd(l/2)
+        sierpinski(l/2,n-1)
+        bk(l/2)
+        left(60)
+        fd(l/2)
+        right(60)
+        sierpinski(l/2,n-1)
+        left(60)
+        bk(l/2)
+        right(60)  
+
+```        
