@@ -1,0 +1,4 @@
+def table():
+    for i in range(21):
+        print('{:2d} : {:5s} {:2s} {:2s}'.format(i, integer_to_string(i, 2), integer_to_string(i,8), integer_to_string(i, 16))
+              
