@@ -66,7 +66,7 @@ def  base64_encode(source):
         if nb==76:
             print (bytes_to_symbols(data), end='\n')
             data = input.read(3)
-            nb=4
+            
         print (bytes_to_symbols(data), end='')
         nb+=4
         data = input.read(3)
