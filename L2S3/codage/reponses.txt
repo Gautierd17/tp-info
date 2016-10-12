@@ -28,4 +28,4 @@ Pour vérifier que ces deux fichiers sont indentiques on a utilisé le module fi
 True
 
 En vérifiant depuis le terminal avec la commande diff on a obtenu le même résultat.
-Donc, notre fonction d'encodage fonction bien. 
+Donc, notre fonction d'encodage fonctionne bien. 
