@@ -1,3 +1,6 @@
+BENZINA Amina
+SHCHERBAKOVA Iuliia
+
 1.2  L’utilitaire base64
 
 Q2. Pour que l'encodage d'un fichier en base64 ne contient aucun symbole =, il faut que sa taille soit divisible par 3. Car en le multipliant par 8 , le resultat sera divisible par 2. Et par suite il sera divisible par 3 et par 2 et ainsi par 6.
@@ -9,5 +12,20 @@ Q2. Pour que l'encodage d'un fichier en base64 ne contient aucun symbole =, il f
 2  Codage d’un fichier en base 64.
 2.2  Encodage
 
+Les reponses se trouvent dans le fichier codage64.py
 
+3. Décodage d’un fichier au format base 64
 
+Les reponses se trouvent dans le fichier codage64.py
+
+4. Réalisation de l’utilitaire base64
+
+Q11. On a encodé l'image logo_FIL.png en base64 utilisant la commande '& base64 nom_fichier' d'un terminal et avec la fonction python 'usage()'. On a enregistré l'information encodé dans la base 64 dans 2 fichiers texte differents: image64-terminal.txt (pour le fichier encodé depuis le terminal) et 
+                  image64-python.txt (pour le fichier encodé utilisant notre fonction python).
+Pour vérifier que ces deux fichiers sont indentiques on a utilisé le module filecmp du python.
+>>> import filecmp
+>>> filecmp.cmp('image64-terminal.txt', 'image64-python.txt')
+True
+
+En vérifiant depuis le terminal avec la commande diff on a obtenu le même résultat.
+Donc, notre fonction d'encodage fonction bien. 
