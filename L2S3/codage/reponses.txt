@@ -29,3 +29,5 @@ True
 
 En vérifiant depuis le terminal avec la commande diff on a obtenu le même résultat.
 Donc, notre fonction d'encodage fonctionne bien. 
+Pour vérifier si la fonction de decodage est bien fait, nous allons decoder ces fichiers('image64-python.txt et image64-terminal.txt) depuis le terminal(>& base64 -d nom_fichier) et en utlisant la fonction 'usage()'. Après le decodage de ces fichiers texte on compare le résultat obtenu. 
+Nous pouvons voir qu'on a obtenu le même résultat donc, la fonction de decodage est bien realisée.  
