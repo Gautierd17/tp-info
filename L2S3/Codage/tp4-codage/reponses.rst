@@ -50,6 +50,10 @@ On a testé trois variables: coding1,coding2 et coding3, pour un lettre 'S'.
 >>> coding3.code('S')
 '1011'
 
+La fonction de codage
+=====================
+
+
 
 
 
