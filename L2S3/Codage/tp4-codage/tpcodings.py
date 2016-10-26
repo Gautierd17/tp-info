@@ -28,3 +28,26 @@ coding2=create(source_alphabet,code2)
 coding3=create(source_alphabet,code3)
 ### question 7
 ### fait
+
+def code_word(word,my_coding):
+    """
+
+    Code a word with the provided coding
+    
+    :param word: the word to be coded
+    :type(word): str
+    :param my_coding: the coding to use for coding the word
+    :type(my_coding): Coding
+    :return: coded word with my_coding
+    :type return: str
+    :UC: symbols in the word are in the source alphabet of the coding
+    :examples:
+    >>> code_word('', coding1)
+    ''
+    >>> code_word('ABCD', coding1)
+    '00000000010001000011'
+    >>> code_word(' ZA', coding1)
+    '111111100100000'
+    """
+    assert isinstance(word,str), 'Not a string passed as parameter'
+    for i in word  #///////////////////////
