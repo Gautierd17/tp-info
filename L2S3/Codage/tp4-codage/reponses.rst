@@ -12,6 +12,7 @@ Pour des trois questions suiv. on defin. des consts:
 >>> my_coding=create(source_alphabet,code)
 
 Question2.
+.. code:: python
 >>> my_coding.code('a')
 '010'
 >>> my_coding.code('b')
@@ -20,6 +21,7 @@ Question2.
 '110'
 
 Question3.
+.. code:: python
 >>> my_coding.decode('010')
 'a'
 >>> my_coding.decode('100')
@@ -43,6 +45,7 @@ Fait sur fichier python functions.py
 
 Question7.
 On a testé trois variables: coding1,coding2 et coding3, pour un lettre 'S'.
+.. code:: python
 >>> coding1.code('S')
 '10010'
 >>> coding2.code('S')
