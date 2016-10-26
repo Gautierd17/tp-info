@@ -4,7 +4,7 @@ Le module Coding
 ================
 
 :: 1.3 Premier essai du module ::
-#################################
+*********************************
 
 Pour des trois questions suiv. on defin. des consts:
 
@@ -40,7 +40,7 @@ Les codages utilisés dans le TP
 ===============================
 
 :: 2.3 Création des codages ::
-##############################
+******************************
 
 Question6.
 Fait sur fichier python functions.py
