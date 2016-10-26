@@ -45,7 +45,7 @@ Les codages utilisés dans le TP
 ******************************
 
 Question6.
-Fait sur fichier python functions.py
+Fait sur fichier python tpcodings.py
 
 Question7.
 On a testé trois variables: coding1,coding2 et coding3, pour un lettre 'S'.
@@ -59,6 +59,7 @@ On a testé trois variables: coding1,coding2 et coding3, pour un lettre 'S'.
 
 La fonction de codage
 =====================
+
 
 
 
