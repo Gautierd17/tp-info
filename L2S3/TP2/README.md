@@ -4,6 +4,7 @@
 ### Part 1.
 
 [![Py Download](https://img.shields.io/badge/python-3.4%203.5-green.svg)](https://www.python.org/downloads/release/python-350/)
+[![Py Download](https://img.shields.io/badge/python-3.4%203.5-green.svg)](https://www.python.org/downloads/release/python-350/)
 ### 2.2. Tracer une fonction récursive
 
 ####  What is recursion? 
