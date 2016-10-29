@@ -93,7 +93,7 @@ True
 
 Donc, l'expression qui permet de connaître la longueur commune des mots:
 
->>>len(codeword)%5 != 0
+>>> len(codeword)%5 != 0
 
 
 
