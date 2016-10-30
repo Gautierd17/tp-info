@@ -95,7 +95,74 @@ Donc, l'expression qui permet de connaître la longueur commune des mots:
 
 >>> len(codeword)%5 != 0
 
+Question11.
+tpcodings.py
 
+Question12.
 
+>>> decode_fixed_length_word('000100111000011000000011000100',coding1)
+'CODAGE'
 
+Question13.
+On a obtenu: 'LA PHILANTHROPIE DE L OUVRIER CHARPENTIER'
 
+>>> decode_fixed_length_word('01011000001111101111001110100001\
+01100000011011001100111100010111\
+00111101000001001111100011001001\
+11110101111111011101010010101100\
+01010000010010001111110001000111\
+00000100010111100100011011001101\
+0000010010001',coding1)
+'LA PHILANTHROPIE DE L OUVRIER CHARPENTIER'
+
+Le décodage pour les codages à virgule
+======================================
+
+Question14.
+On teste la méthode find.
+
+>>> x = 'this is first example'
+>>> y = 'rst'
+>>> x.find(y)
+10
+>>> z = 'on'
+>>> x.find(z)
+-1
+
+Question15.
+Fait tpcodings.py
+
+Question16.
+Resultat: 'POUR LA FRANCE D EN BAS DES NOUILLES ENCORE'
+
+>>> decode_comma_word('.--./---/..-/.-./---./.-../.-/--\
+-./..-./.-./.-/-./-.-././---./-.\
+./---././-./---./-.../.-/.../---\
+./-.././.../---./-./---/..-/../.\
+-../.-.././.../---././-./-.-./--\
+-/.-././', '/',coding2)
+'POUR LA FRANCE D EN BAS DES NOUILLES ENCORE'
+
+Le décodage pour les codages préfixes
+=====================================
+
+Question17.
+
+>>> decode_prefix_letter('.--./---/..-/.-./---./.-../.-/--\
+-./..-./.-./.-/-./-.-././---./-.\
+./---././-./---./-.../.-/.../---\
+./-.././.../---./-./---/..-/../.\
+-../.-.././.../---././-./-.-./--\
+-/.-././', coding2)
+('P', 5)
+
+On a obtenu un tuple ('P',5)
+
+Question18.
+Question19.
+
+Stockage et lecture en binaire
+==============================
+
+Question20.
+Le contenu du mon fichier file.txt c'est ß.
