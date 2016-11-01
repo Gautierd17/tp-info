@@ -159,10 +159,12 @@ Question17.
 On a obtenu un tuple ('P',5)
 
 Question18.
+J'ai un probleme avec cette exception :c
 Question19.
+J'ai obtenu: 'THALES EST TOUJOURS A FAIRE'
 
 Stockage et lecture en binaire
 ==============================
 
 Question20.
-Le contenu du mon fichier file.txt c'est ß.
+Le contenu d'un fichier file.txt c'est AB.
