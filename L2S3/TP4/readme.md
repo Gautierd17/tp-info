@@ -1,7 +1,7 @@
 # TP 4 : Algorithmes et programmation
 
 ## 2. Bon parenthésage
-[![Py Download](https://img.shields.io/badge/python-3.4%203.5-green.svg)](https://www.python.org/downloads/release/python-350/)
+[![Py Download](https://img.shields.io/badge/python-3.5-red.svg)](https://www.python.org/downloads/release/python-350/)
 [![Sphinx](https://img.shields.io/badge/sphinx-python%20doc%20generator-green.svg)](http://www.sphinx-doc.org/en/1.4.8/)
 [![Unix](https://img.shields.io/badge/linux-command%20line-lightgrey.svg)](http://linuxcommand.org/lc3_learning_the_shell.php)
 [![Unix](https://img.shields.io/badge/python-recursion%20functions-3bf4b3.svg)](http://anandology.com/python-practice-book/functional-programming.html)
