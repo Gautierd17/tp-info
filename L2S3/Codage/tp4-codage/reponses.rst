@@ -6,8 +6,8 @@ Le module Coding
 
 :: 1.3 Premier essai du module ::
 *********************************
-
-Pour des trois questions suiv. on defin. des consts:
+Les fonctions se trouvent dans le fichier tpcodings.py
+Pour des trois questions suivantes on définit des consts:
 
 >>> source_alphabet = ['a', 'b', 'c']
 >>> code=['010','100','110']
@@ -36,7 +36,7 @@ Question4.
 On obtient une erreur 'Not_codable_symbol'.
 
 Question5.
-On obt. une erreur 'Undecodable_word'.
+On obtient une erreur 'Undecodable_word'.
 
 Les codages utilisés dans le TP
 ===============================
@@ -45,10 +45,10 @@ Les codages utilisés dans le TP
 ******************************
 
 Question6.
-Fait sur fichier python tpcodings.py
+Fait dans le fichier python tpcodings.py
 
 Question7.
-On a testé trois variables: coding1,coding2 et coding3, pour un lettre 'S'.
+On a testé trois variables: coding1,coding2 et coding3, pour une lettre 'S'.
 
 >>> coding1.code('S')
 '10010'
@@ -63,7 +63,7 @@ Question8.
 Fait dans le fichier tpcodings.py
 
 Question9.
-On verif si notre fonctionne donne le bon résultat.
+On verif. si notre fonction retourne le bon résultat.
 
 >>> code_word('CODAGE',coding1) == '000100111000011000000011000100'
 True
@@ -130,7 +130,7 @@ On teste la méthode find.
 -1
 
 Question15.
-Fait tpcodings.py
+Fait, tpcodings.py
 
 Question16.
 Resultat: 'POUR LA FRANCE D EN BAS DES NOUILLES ENCORE'
@@ -159,12 +159,23 @@ Question17.
 On a obtenu un tuple ('P',5)
 
 Question18.
-J'ai un probleme avec cette exception :c
+J'ai un probleme avec cette exception.
 Question19.
 J'ai obtenu: 'THALES EST TOUJOURS A FAIRE'
+
 
 Stockage et lecture en binaire
 ==============================
 
 Question20.
 Le contenu d'un fichier file.txt c'est AB.
+
+Question21.
+tpcodings.py
+
+Question22,23,24.
+tpcodings.py
+
+Qustion25,26.
+Pas fait.
+
