@@ -138,40 +138,43 @@ def decode_prefix_word(word, my_coding):
         if len(word)<2:
             break
     return res
-
+import os
 ### question 20
-##def write_bits(stream,bits):
-##    file = open(stream,'wb') 
-##    if not open(stream,mode='wb'):
-##        raise AssertionError("The stream must be opened in write and binary modes ('wb')")
-##    res = len(bits)%8
-##    if res==0:
-##        wrt1 = bits
-##        file.write(wrt1.encode())
-##        return ''
-##        file.close()
-##    if res!=0:
-##        wrt2 = bits[:-res]
-##        file.write(wrt2.encode())
-##        return bits[-res:]
-##        file.close()
-
 def write_bits(stream,bits):
-    with open(stream,'a') as f: #a + space
-        res = len(bits)%8
-        if res!=0:
-            chaine = bits[:-res]
-            list_bytes = binary_to_bytes(chaine)
-            string = "".join(str(x) for x in list_bytes)
-            t = bytes(string.encode())
-            f.write(" {} ".format(t))
-            return bits[-res:]
-        else:
-            list_byte = binary_to_bytes(bits)
-            s = "".join(str(x) for x in list_byte)
-            t = bytes(s.encode())
-            f.write(" {} ".format(t))
-            return ""
+    assert os.access(stream,mode=='wb')
+    res = len(bits)%8
+    if res==0:
+        wrt1 = bits
+        wrt = binary_to_bytes(wrt1) #list
+        not_list="".join(str(x) for x in wrt)
+        stream.write((not_list).encode())
+        return ''
+        stream.close()
+    if res!=0:
+        wrt2 = bits[:-res]
+        wrt=binary_to_bytes(wrt2)
+        not_list= "".join(str(x) for x in wrt)
+        stream.write(not_list.encode())
+        return bits[-res:]
+        stream.close()
+    
+
+##def write_bits(stream,bits):
+##    with open(stream,'a') as f: 
+##        res = len(bits)%8
+##        if res!=0:
+##            chaine = bits[:-res]
+##            list_bytes = binary_to_bytes(chaine)
+##            string = "".join(str(x) for x in list_bytes)
+##            t = bytes(string.encode())
+##            f.write(" {} ".format(t))
+##            return bits[-res:]
+##        else:
+##            list_byte = binary_to_bytes(bits)
+##            s = "".join(str(x) for x in list_byte)
+##            t = bytes(s.encode())
+##            f.write(" {} ".format(t))
+##            return ""
     
 ### question 21
 def complete_byte(bits):
@@ -185,12 +188,9 @@ def complete_byte(bits):
     
 ### question 22
 def read_bits(stream):
-    f = open(stream, 'r')
-    while True:
-        ch=f.read(1)
-        if not ch:
-            break
-        print(ch)
+    res = stream.read(8)
+    return res
+
 
 ### question 23
 def uncomplete_byte(bits):
@@ -315,5 +315,8 @@ def read_file(file):
           
         
 
-
+    
+            
+    
+    
     
