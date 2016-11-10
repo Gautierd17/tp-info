@@ -49,3 +49,7 @@ plt.ylim(variability.shape[0],0)
 
 print boundingBox
 plt.show()
+
+https://habrahabr.ru/post/220077/
+    https://habrahabr.ru/post/208090/
+        https://habrahabr.ru/post/133826/
