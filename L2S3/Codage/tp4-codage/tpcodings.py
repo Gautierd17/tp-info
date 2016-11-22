@@ -140,23 +140,21 @@ def decode_prefix_word(word, my_coding):
     return res
 import os
 ### question 20
-def write_bits(stream,bits):
-    assert os.access(stream,mode=='wb')
-    res = len(bits)%8
-    if res==0:
-        wrt1 = bits
-        wrt = binary_to_bytes(wrt1) #list
-        not_list="".join(str(x) for x in wrt)
-        stream.write((not_list).encode())
-        return ''
-        stream.close()
-    if res!=0:
-        wrt2 = bits[:-res]
-        wrt=binary_to_bytes(wrt2)
-        not_list= "".join(str(x) for x in wrt)
-        stream.write(not_list.encode())
-        return bits[-res:]
-        stream.close()
+def write_bits(stream, bits):
+    r = len(bits) % 8
+    
+    if r:
+        wrt = bits[:-r]
+    else:
+        wrt = bits
+    
+    if wrt:
+        wrt = binary_to_bytes(wrt) #list
+        not_list = bytes(wrt)
+        stream.write(not_list)
+ 
+    return bits[-r:] if r else ''
+    
     
 
 ##def write_bits(stream,bits):
@@ -188,9 +186,11 @@ def complete_byte(bits):
     
 ### question 22
 def read_bits(stream):
-    res = stream.read(8)
-    return res
-
+    chunk = stream.read(1)
+    
+    if chunk: 
+        return bin(chunk[0])[2:].zfill(8)
+    return ''
 
 ### question 23
 def uncomplete_byte(bits):
