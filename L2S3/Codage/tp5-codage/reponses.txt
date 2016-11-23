@@ -34,6 +34,7 @@ Q3.
 Fait (entropy.py)
 
 Q4.
+V KLASSE
 Résultats:
 1.
 2.
@@ -71,3 +72,27 @@ Shannon-Fano algo:
                                  
                                  
                                  
+Q7. 
+V KLASSE
+
+Q8.
+Fait (huffman_skeleton.py)
+
+Q9.
+On utilise symbol_list pour créer une liste des elements d'une dict passée en paramentre.
+On utilise tree_list comme le stack pour ajouter ou supprimer des elements.
+
+Q10, Q11.
+Le programme fonctionne bien, mais pas bien fait.
+
+Q12. 
+encoder.
+
+Q13. 
+tester encoder 
+
+Q14.
+decoder
+
+Q15.
+comparer function avec theorie
