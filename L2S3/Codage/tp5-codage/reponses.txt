@@ -1,3 +1,5 @@
+http://algolist.manual.ru/compress/standard/huffman.php
+
 Entropie par octet
 ==================
 
