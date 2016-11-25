@@ -94,8 +94,83 @@ Q10, Q11.
 Le programme fonctionne bien, mais pas bien fait.
 
 Q12. 
-encoder.
+Exemple d'utilisation du codage de Huffman:
+On a un fichier de 100 ocetet dans lequel tous les mots sont écrits utilisant 6 symboles differents. Par exemple:
+A,B,C,D,E,F.
+On a calculé le nombre des probabilités de chaque symbole dans le fichier:
+A : 10 
+B : 20
+C : 30
+D : 5
+E : 25
+F : 10
 
+On réunit les deux arbres de probabilité les plus petites en un unique arbre, sa probabilité
+étant égale à la somme des deux probabilités des arbres réunis.
+
+30    10     5     10     20     25
+ C     A     D      F      B      E
+             |     |
+             |--|--|
+               ||-|
+               |15|  = 5 + 10
+               |--|
+(étape 1)
+On procède ensuite de la même façon jusqu'à obtenir une forêt ne contenant plus qu'un seul
+arbre.
+
+30    10     5     10     20     25
+ C     A     D      F      B      E
+       |     |      |
+       |     |      |
+       | |--||      |
+       |-|15||      |
+         ||-|       |
+          |         |
+          |    |--| |
+          |----|25|-| = 10 + 15
+	       |--|
+
+(étape 2)
+
+30    10     5     10     20     25
+ C     A     D      F      B      E
+ |     |     |      |      |      |
+ |     |     |      |      |      |
+ |     | |--||      |      |      |
+ |     |-|15||      |      |      |
+ |       ||-|       |      |      |
+ |        |         |      |      |
+ |        |    |--| |      | |--| |
+ |        |----|25|-|      |-|45|-|
+ |             ||-|          ||-|
+ |    |--|      |             |
+ |----|55|------|             |
+      |-||                    |
+        |   |------------|    |
+        |---| Root (100) |----|
+            |------------|
+
+(étape n)
+
+Maintenant on peut définir le codage optimal.
+   C = 00   (2 bits)
+   A = 0100 (4 bits)
+   D = 0101 (4 bits)
+   F = 011  (3 bits)
+   B = 10   (2 bits)
+   E = 11   (2 bits)
+   
+       |----------|----------------|-------------------|--------------|
+       |   Freq.  |    Au début    |   Après Hauffman  |  Différence  |
+       |----------|----------------|-------------------|--------------|
+       |  C 30    |  30 x 8 = 240  |    30 x 2 = 60    |      180     |
+       |  A 10    |  10 x 8 =  80  |    10 x 3 = 30    |       50     |
+       |  D 5     |   5 x 8 =  40  |     5 x 4 = 20    |       20     |
+       |  F 10    |  10 x 8 =  80  |    10 x 4 = 40    |       40     |
+       |  B 20    |  20 x 8 = 160  |    20 x 2 = 40    |      120     |
+       |  E 25    |  25 x 8 = 200  |    25 x 2 = 50    |      150     |
+       |----------|----------------|-------------------|--------------|   
 Q13. 
 tester encoder 
 
