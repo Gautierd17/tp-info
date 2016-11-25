@@ -37,11 +37,11 @@ Fait (entropy.py)
 
 Q4.
 Résultats:
-1. cigale.txt | 3.7696885237642164 bits per byte
-2. sonnet18.txt | 3.953068860094331 bits per byte
-3. entropy_skeleton.py | 4.4421425138758135 bits per byte
-4. codage.bmp | 7.661994824168044 bits per byte, codage.png | 6.565383475325912 bits per byte
-5. tp3-codage.zip | 6.006553349754179 bits per byte
+1. cigale.txt | 3.7991953737198085 bits per byte
+2. sonnet18.txt | 3.9739164935644125 bits per byte
+3. entropy_skeleton.py | 4.472445544178845 bits per byte
+4. codage.bmp | 7.669807324168044 bits per byte, codage.png | 6.570247196020586 bits per byte
+5. tp3-codage.zip | 6.017314629059505 bits per byte
 6. morse.mp3 | 6.902062818381617 bits per byte, morse.wav | 7.71437728328608 bits per byte
 
 Estimation de la taille d’un fichier optimalement codé
@@ -72,15 +72,16 @@ Shannon-Fano algo:
                                  D          E
                                  
                                  
-                                 
+Dans le codage de Shannon-Fano, les symboles sont disposés dans l'ordre du plus probable au moins probable, puis divisés en deux ensembles dont les probabilités totales sont aussi proches que possible de l'égalité.
+
 Q7. 
 Résultats:
-1. cigale.txt | 50.79713098177041%
-2. sonnet18.txt | 61.082521752070996%
-3. entropy_skeleton.py | 40.930290113439774%
-4. codage.bmp | 27.657818539835688%, codage.png | 20.1697091263091%
-5. tp3-codage.zip | 22.82663068423612%
-6. morse.mp3 | 19.808389694149085%, morse.wav | 22.583643967927422%
+1. cigale.txt | 41.872815172828915%
+2. sonnet18.txt | 51.95812869587762%
+3. entropy_skeleton.py | 36.527512018599474%
+4. codage.bmp | 26.906682486648858%, codage.png | 19.010586543255727%
+5. tp3-codage.zip | 21.37481862265539%
+6. morse.mp3 | 18.8635193319918%, morse.wav | 21.8747403456158%
 
 Q8.
 Fait (huffman_skeleton.py)
