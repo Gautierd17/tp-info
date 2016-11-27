@@ -4,8 +4,6 @@ Implantation de l'algorithme de Huffman
 @author FIL - IEEA - Univ. Lille (août 2015)
 '''
 
-### imports 
-import tp2
 import doctest
 import operator
 from huffman_tree import HuffmanTree
@@ -40,7 +38,7 @@ def symbol_occurrences(stream):
     True
     '''
     l=[]
-    byte=stream.read(0)
+    byte=stream.read(1)
     for line in stream:
         for byte in line:
             l.append(byte)
@@ -239,9 +237,8 @@ def read_occurrences(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
 
-from decoder_encoder import *
 
-def huffman_encode(filename, outFileName):
+def huffman_encode(filename, out_filename):
     '''
     Encode a file using Huffman algorithm and writes the result to 
     an other file.
@@ -257,11 +254,38 @@ def huffman_encode(filename, outFileName):
     encoding will be stored.
     :type out_filename: str
     '''
-    encoding = Encoder(filename)
-    encoding.write(outFileName)
-
-
+    stream = open(filename, 'rb')
     
+    # Calcul du nombre d'occurrences
+    d_occurrences = symbol_occurrences(stream)
+    
+    # Création du codage de Huffman
+    codage = get_coding_from_tree(create_huffman_tree(d_occurrences))
+    d_codage=dict(codage)
+    
+    # Ecriture du fichier stockant le dictionnaire d'occurrences
+    with open(out_filename+'.dict', 'w') as d_file:
+        for key, value in d_codage.items():
+            d_file.write('%s:%s\n' % (key, value))
+    
+    # Mise de la tête de lecture au début du fichier pour le reparcourir
+    stream.seek(0)
+    
+    # Parcours du fichier et encodage des symboles lus
+    str_stream=stream.read()
+    list_stream=list(str_stream)
+    list_to_append=[]
+    for item in list_stream:
+        code_item=d_codage.get(item)
+        list_to_append.append(code_item)
+        
+    encoded=''.join(list_to_append)
+    bit_encoded=[encoded[i:i + 8] for i in range(0, len(encoded), 8)]
+    byte_list = [int(b, 2) for b in bit_encoded]
+
+    with open(out_filename, 'wb') as f:
+        f.write(bytearray(byte_list))
+
 def prefix_tree_decoding(bits, tree):
     '''
     Return the decoding of the binary string given in parameter
@@ -294,7 +318,8 @@ def prefix_tree_decoding(bits, tree):
     assert(noeud.isLeaf()), "La chaine devrait se terminer sur une feuille"
     sortie += noeud.symbol
     return sortie
-    
+
+from tp2 import byte_to_binary    
 def huffman_decode(filename, out_filename):
     '''
     Decode a file encoded with a Huffman encoding.
@@ -304,5 +329,27 @@ def huffman_decode(filename, out_filename):
     :param out_filename: the file name where the decoding will be stored
     :type out_filename: str
     '''
-    decoder=Decoder(filename)
-    decoder.decode_as(out_filename)
+
+    with open(filename,'rb') as f:
+        s=f.read()
+        list_bytes = list(bytearray(s))
+        l=[]
+        for el in list_bytes:
+            l.append(byte_to_binary(el))
+    data = dict()
+    
+    with open(filename+'.dict','r') as raw_data:
+        for item in raw_data:
+            if ':' in item:
+                key,value = item.split(':', 1)
+                data[key]=value
+            else:
+                pass
+    
+    s = ''.join(l)
+    tree= create_huffman_tree(data)
+    out = prefix_tree_decoding(s, tree)
+    d = open(out_filename,'w')
+    d.write(out[2:])
+         
+            
