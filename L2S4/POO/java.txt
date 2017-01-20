@@ -1,2 +1,3 @@
 create diagrams 
 tp1
+exercices td: class, objects
