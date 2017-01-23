@@ -10,13 +10,13 @@
 
 import sys
 import experience
-import sorting
+import sorting 
 
 def compare (m1,m2):
     return experience.compare(m1,m2)
 
 # STRATEGY 1
-def negative_markers1(markers,positive):
+def negative_markers1(markers,nbre):
     """
     Computes the list of negative markers from the list of markers and
     the list of positive markers.
@@ -27,31 +27,28 @@ def negative_markers1(markers,positive):
     :type positive: List of String
     :return: The list of negative markers
     :rtype: List of String
+
+    Exemple:
+    >>> negative_markers1(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])
+    ['m1', 'm4', 'm5']
+    >>> negative_markers1(['m1','m2','m3'],['m2'])
+    ['m1', 'm3']
+    >>> negative_markers1(['m1','m2','m3'],['m1','m2','m3'])
+    []
     """
-    
-    negative=[]
-##    for marker in markers:
-##        found=False
-##        i=0
-##        while i<len(positive) and not found:
-##            if compare(marker, positive[i])==0:
-##                found=True
-##            i+=1
-##                
-##            if found!=True:
-##                negative.append(marker)
-##           
-##             
-##    return negative
-    
+    negative = []
+    positive=experience.experience(nbre,markers)
     for marker in markers:
+        found=False
         i=0
-        while len(positive)>i:
+        while i<len(positive) and not found:
             if compare(marker, positive[i])==0:
-                break
+                found=True
             i+=1
-        else:
-            negative.append(marker)
+                
+        if not found:
+            negative.append(marker)  
+             
     return negative
 
 # STRATEGY 2
@@ -66,25 +63,35 @@ def negative_markers2(markers,positive):
     :type positive: List of String
     :return: The list of negative markers
     :rtype: List of String
-    """
 
-    positive_sorted=sorting.merge_sort(positive,compare) # sorting "positive" list items
+    Exemple:
+    >>> negative_markers1(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])
+    ['m1', 'm4', 'm5']
+    >>> negative_markers1(['m1','m2','m3'],['m2'])
+    ['m1', 'm3']
+    >>> negative_markers1(['m1','m2','m3'],['m1','m2','m3'])
+    []
+    """
+    positive_sorted = sorting.merge_sort(positive,compare)
     negative = []
+
     for marker in markers:
+        found=False
         i=0
-        while len(positive_sorted)>i:
+        while i<len(positive_sorted) and not found:
             if compare(marker, positive_sorted[i])==0:
-                break
+                found=True
             i+=1
-        else:
+                
+        if not found:
             negative.append(marker)
-    
+                        
     return negative
 
 # STRATEGY 3
 def negative_markers3(markers,positive):
     """
-    Computes the list of negative markers from the sorted list of markers and
+    Computes the list(sorted) of negative markers from the sorted list of markers and
     the sorted list of positive markers.
 
     :param markers: The list of markers
@@ -93,24 +100,37 @@ def negative_markers3(markers,positive):
     :type positive: List of String
     :return: The list of negative markers
     :rtype: List of String
+
+    Exemple:
+    >>> negative_markers1(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])
+    ['m1', 'm4', 'm5']
+    >>> negative_markers1(['m1','m2','m3'],['m2'])
+    ['m1', 'm3']
+    >>> negative_markers1(['m1','m2','m3'],['m1','m2','m3'])
+    []
     """
-    
-    negative = []
-    
-    positive_sorted=sorting.merge_sort(positive,compare)
-    markers_sorted=sorting.merge_sort(markers,compare)
-
+    ## create_positive_list=experience.experience(4, markers)
+    positive_sorted = sorting.merge_sort(positive,compare)
+    markers_sorted = sorting.merge_sort(markers,compare)
+    negative=[]
     for marker in markers_sorted:
+        found=False
         i=0
-        while len(positive_sorted)>i:
+        while i<len(positive_sorted) and not found:
             if compare(marker, positive_sorted[i])==0:
-                break
+                found=True
             i+=1
-        else:
+                
+        if not found:
             negative.append(marker)
-
+                        
     return negative
-        
+
+##import timeit
+##print(timeit.timeit("negative_markers1(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])",setup="from __main__ import negative_markers1"))
+##print(timeit.timeit("negative_markers2(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])",setup="from __main__ import negative_markers2"))
+##print(timeit.timeit("negative_markers3(['m1','m2','m3','m4','m5','m6'],['m6','m2','m3'])",setup="from __main__ import negative_markers3"))
+
 ##if __name__ == "__main__":
 ##    p = int(sys.argv[1])
 ##    m = int(sys.argv[2])
@@ -135,4 +155,3 @@ def negative_markers3(markers,positive):
 ##    cpt = 0
 ##    print("Negative markers: %s" % (negative_markers3(markers,positive)))
 ##    print("Nb. comparisons: %d" % (cpt))
-##
