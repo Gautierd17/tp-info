@@ -24,6 +24,21 @@ Exercice 7.
 Cette directive indique le début d'un segment du code. Celui-ci est défini lors de l’assemblage et contient le code à exécuter. 
 ( Le code assembleur doit être transformé en code octal afin d’être exécuté par le microprocesseur.)
 
+Exercice 8;9
+============
 
+***************
+Codage de César
+***************
 
+Exercice 15
+===========
 
+Si vous retournez une valeur supérieure à 255(seuls les moins significatifs 8 bits sont utilisés) 256 devient 0.
+
+Exercice 16.
+============
+
+1)Function int getchar (void) obtient un caractère (un caractère non signé) de stdin
+2)Function int putchar (int char) écrit un caractère spécifié par l'argument char à stdout.
+3)
