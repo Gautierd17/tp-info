@@ -52,3 +52,86 @@ for($z=0;$z<$n;$z++){
 Exercice 5.
 ===========
 
+<?php
+
+$text = "chaine";
+$long=strlen($text);
+
+echo "<p>".$text."</p>";
+for($z=1;$z<$long;$z++){
+  echo "<p>".substr($text,0,-$z)."</p>";
+}
+
+?>
+
+Exercice 6.
+===========
+
+<ul>
+<?php
+
+$text = "chaine";
+$long=strlen($text);
+
+echo "<li>".$text."</li>";
+for($z=1;$z<$long;$z++){
+  echo "<li>".substr($text,0,-$z)."</li>";
+}
+?>
+</ul>
+
+Exercice 7.
+===========
+
+<?php
+
+$max=9;
+
+$result = 2;
+for($i=1; $i<=$max; $i++){
+    echo  "2 * $i = ".($i * $result) .', ';
+   
+}
+//echo "2 * 10 = 20" // pour finir la boucle 
+?>
+
+Exercice 8.
+===========
+
+<?php
+
+$max=9;
+
+$result = array(2,3,4,5,6,7,8,9);
+foreach($result as $value){
+for($i=1; $i<=$max; $i++){
+    echo  "$value * $i = ".($i * $value) .', ';
+   
+}
+    
+   }
+
+?>
+
+Exercice 9.
+===========
+
+
+<?php
+$cols=10;
+$rows=10;
+echo "<table border=\"1\">";
+
+        for ($r =0; $r < $rows; $r++){
+
+            echo'<tr>';
+
+            for ($c = 0; $c < $cols; $c++)
+                echo '<td>' .$c*$r.'</td>';
+           echo '</tr>'; // close tr tag here
+
+        }
+
+  echo"</table>";
+
+?>
