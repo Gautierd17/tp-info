@@ -11,7 +11,7 @@ main
 	int lines=0; 
 
 	while((item=getchar()) != EOF){
-		putchar(reverseStr(lines));
+		putchar(strrev(lines));
 	}
 	return 0;
 }
