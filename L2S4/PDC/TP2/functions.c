@@ -13,24 +13,4 @@ void reverse(char s[])
     }
 }
 
-int main()
-{
-    fstream myfile;
-    myfile.open("test.txt",ios::in);
-    
-    fstream outfile;
-    outfile.open("output.txt",ios::out|ios::app);
-    map<string,int> mymap;
-    string cur;
-    while(getline(myfile,cur)){
-        if(mymap[cur]==NULL){
-            mymap[cur]=1;
-            outfile.write(cur.c_str(),cur.length());
-            outfile.put('\n');
-        }
-        else
-            mymap[cur]++;
-    }
-    outfile.close();
-    myfile.close();
-}
+
