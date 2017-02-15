@@ -1,0 +1,29 @@
+* {
+  font-family: sans-serif;
+}
+div.facture section {
+  border : solid 1pt;
+  margin-bottom : 3pt;
+  padding : 5pt;
+  max-width : 600px; 
+}
+div.facture section h2{
+  font-size : 15pt;
+}
+#apayer table {
+  border-collapse : collapse;
+}
+#apayer table td{
+  border : solid 1pt;
+  padding : 3pt;
+}
+#apayer table td:nth-child(n+2){
+ text-align : right;
+}
+
+#apayer table tfoot td{
+  background-color : #eee;
+}
+#apayer table thead td{
+  font-style: italic;
+}
