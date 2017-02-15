@@ -6,8 +6,6 @@ require_once('lib/lectureArguments0.php');
  * à compléter
 */
 
-$figure=
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
