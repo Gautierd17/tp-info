@@ -1,0 +1,13 @@
+SELECT coureurs.nom, coureurs.dossard, coureurs.taille
+FROM coureurs
+WHERE taille<180
+
+SELECT nom, dossard, equipe 
+FROM coureurs
+order by equipe;
+
+SELECT coureurs.nom, coureurs.dossard
+FROM coureurs, equipes
+WHERE  equipe='LavePlusBlanc'
+
+SELECT CONCAT("nom","equipe") FROM coureurs;
