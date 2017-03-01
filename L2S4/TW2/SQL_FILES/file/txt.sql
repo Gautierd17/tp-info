@@ -11,3 +11,5 @@ FROM coureurs, equipes
 WHERE  equipe='LavePlusBlanc'
 
 SELECT CONCAT("nom","equipe") FROM coureurs;
+
+UPPER/LOWER 
