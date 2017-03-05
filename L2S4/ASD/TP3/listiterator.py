@@ -1,4 +1,4 @@
-  #-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 """:mod:`listiterator` module : list implementation with iterator interaction
 
@@ -103,7 +103,7 @@ def __print_without_iterator_reversed (c):
     else:
         print(c["value"], end=' ')
         __print_without_iterator_reversed (c["prev"])
-    pass
+    
 
 def print_list (l,reverse=False):
     """
@@ -129,9 +129,9 @@ def get_listiterator (l, from_the_end = False):
     :return: An iterator at the begining of the list
     :rtype: dict
     """
-    if is_empty(l):
-        raise EmptyList("The list has no elements")
-    elif from_the_end == True:
+##    if is_empty(l):
+##        raise EmptyList("The list has no elements")
+    if from_the_end == True:
         return {"liste":l, "prev": l["tail"], "next": None}
     else:
         return {"liste":l, "prev": None, "next": l["head"]}
@@ -227,10 +227,52 @@ def add (it,v):
     :type v: Any
     """
     if is_empty(it["liste"]):
-        #ajouter v à la liste à l'emplacement pointé par l'itérateur
-        
+        c=__new_cell(v,None,None)
+        it["liste"]["head"]=c
+        it["liste"]["tail"]=c
+        return it["liste"]
     else:
-        if hasNext(it):
-            
-         
-    pass
+        next_c=it["next"]
+        prev_c=it["prev"]
+        if it["next"]==None:
+            prev_c=it["prev"]
+            c=__new_cell(v,None,prev_c)
+            prev_c["next"]=c
+        elif it["prev"]==None:
+            c=__new_cell(v,next_c,None)
+            next_c["prev"]=c
+            it["liste"]["head"]=c
+        else:
+            c=__new_cell(v,next_c,prev_c)
+            prev_c["next"]=c
+            next_c["prev"]=c
+        return it["liste"]
+    
+
+def remove(it):
+    """
+    Removes from the list the last element that was returned by next()
+    or previous() (optional operation). This call can only be made once
+    per call to next or previous. It can be made only if add(E) has not
+    been called after the last call to next or previous.
+
+    :param it: the Iterator
+    :type it: dict
+    :rtype: dict
+    """
+    if is_empty(it["liste"]):
+        raise EmptyList("The list has no elements")
+    else:
+        if it["prev"]==None:
+            n=it["next"]["next"]
+            n["prev"]=None
+            it["liste"]["head"]=n
+        elif it["next"]==None:
+            n=it["prev"]["prev"]
+            n["next"]=None          
+        else:    
+            n=it["next"]["next"]
+            n["prev"]=it["prev"]
+            prv=it["prev"]
+            prv["next"]=n
+        return it["liste"]
