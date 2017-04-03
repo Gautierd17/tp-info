@@ -68,8 +68,6 @@ Pour vérif si AB est ABR on doit prouver que:
 Implementation C
 ----------------
 .. code-block:: c
-   :emphasize-lines: 3,5
-
        int isABR(Noeud_t abr)
     {
       if (abr == NULL)
