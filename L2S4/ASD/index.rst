@@ -36,6 +36,8 @@ Fichiers TP
   * ArbreBinaire.c :: module arbre binaire
 
 Les arbres.pdf se trouvent dans le dossier images.
+For an in-depth explanation, please see :download:`A Detailed Example <abr1_arbre.pdf>`.
+
 ~~~~~~~~~~~~~~~~~~~~~~
 Réponses aux questions
 ~~~~~~~~~~~~~~~~~~~~~~
