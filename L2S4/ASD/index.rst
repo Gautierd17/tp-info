@@ -1,73 +1,90 @@
----------------
-Experimentateur
----------------
-
-
-.. toctree::
-   :maxdepth: 1
-
-   experience.rst
+-----------------
+tp-arbresbinaires
+-----------------
 
 ~~~~~~~~~~
 Etat du TP
 ~~~~~~~~~~
 
-Décrivez ici l'état d'avancement du TP.
+Partie 5.2 :
+  * 5.2.1 : Fait
+  * 5.2.2 : Fait
+  * 5.2.3 : Fait
+Partie 5.3 :
+  * Q1 : Fait
+  * Q2 : Fait
+  * Q3 : Fait
+  * Q4 : Fait
+  * Q5 : Fait
+  * Q6 : Pas Fait
+  * Q7 : Fait
+Partie 5.4 :
+  * Q1 : Fait
+  * Q2 : Pas Fait
 
+~~~~~~~~~~~~
+Fichiers TP
+~~~~~~~~~~~~
+  * exemple1_arbre.c :: arbre binaire 1
+  * exemple2_arbre.c :: arbre binaire 3
+  * exemple3_arbre.c :: arbre binaire 2
+  * abr1_arbre.c :: ABR 1
+  * abr2_arbre.c :: ABR 2
+  * abr3_arbre.c :: ABR 3
+  * Test_arbre.c :: fonctions et tests
+  * Affichage.c :: programme d'Affichage
+  * ArbreBinaire.c :: module arbre binaire
+
+Les arbres.pdf se trouvent dans le dossier images.
 ~~~~~~~~~~~~~~~~~~~~~~
 Réponses aux questions
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Indiquez ici les réponses aux questions posées dans le TP. Vous
-reprendrez le numéro de la section et le numéro de la question. Par
-exemple pour répondre à la question 3 de la section 2.4 vous
-indiquerez.
+Question 5.2.3.(5)
+------------------
+Des valeurs de factoriels plus grandes que 20! sont negatifs parce que la
+limite de unsigned long est en fait 2147483647.
 
-***************
-1.2 Stratégie 1
-***************
+Question 5.3.(2)
+----------------
+Par définition, Un arbre binaire a est un arbre binaire de recherche si,
+pour tout nœud s de a, les contenus des nœuds du sous-arbre gauche de s
+sont strictement inférieurs au contenu de s, et que les contenus des
+nœuds du sous-arbre droit de s sont strictement supérieurs au contenu
+de s.
+Par example, on a AB:
+          a
+        /   \
+       b     c
+     /  \
+    d    e
 
-Question 1.2.2
---------------
+Pour vérif si AB est ABR on doit prouver que:
+  1) a>b
+  2) a<c
+  3) b>d
+  4) d<e
 
-Question 1.2.3
---------------
+Implementation C
+----------------
+.. code-block:: c
+   :emphasize-lines: 3,5
 
-Il n'y a ni pire ni meilleur des cas.
+       int isABR(Noeud_t abr)
+    {
+      if (abr == NULL)
+        return(true);
 
-Question 1.2.4
---------------
+      if (abr->filsgauche!=NULL && valeur_maximale(abr->filsgauche) > abr->val)
+        return(false);
 
-C(m,p)=(m-p)p + p(p+1)/2
+      if (abr->filsdroit!=NULL && valeur_minimale(abr->filsdroit) < abr->val)
+        return(false);
 
-***************
-1.3 Stratégie 2
-***************
+      if (!isABR(abr->filsgauche) || !isABR(abr->filsdroit))
+        return(false);
+      return(true);
+    }
 
-On utilise le modue `sorting`.
-
-Question 1.3.2
---------------
-
-Meilleur des cas:
-Les marqueurs negatifs sont plus petits que les marqueurs positifs.
-
-.. math::
-C(m,p)=(m-p)+p(p+1)/2
-
-Pire des cas:
-Les marqueurs negatifs sont plus grands que les marqueurs positifs.
-C(m,p)=p(m-p)+
-
-***************
-1.4 Stratégie 3
-***************
-
-Question 1.4.2
---------------
-
-Il n'y a pas de pire des cas parce que les listes "positive" et "markers"
-sont tries.
-
-.. math::
-C(m,p)=p(p+1)/2+
+.. toctree::
+   :maxdepth: 1
