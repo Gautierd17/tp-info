@@ -68,7 +68,7 @@ Pour vérif si AB est ABR on doit prouver que:
 Implementation C
 ----------------
 .. code-block:: c
-       int isABR(Noeud_t abr)
+ int isABR(Noeud_t abr)
     {
       if (abr == NULL)
         return(true);
